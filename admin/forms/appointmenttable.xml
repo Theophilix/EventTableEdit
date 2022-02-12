@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form  addfieldprefix="ETE\Component\EventTableEdit\Administrator\Field">
+	<fieldset >
+		<field name="id"
+			type="text"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC"
+			size="10"
+			default="0"
+			readonly="true"
+			class="readonly"
+		/>
+
+		<field name="name"
+			type="text"
+			label="COM_EVENTTABLEEDIT_FIELD_NAME_LABEL"
+			description="COM_EVENTTABLEEDIT_FIELD_NAME_DESC"
+			size="30"
+			required="true"
+		 />
+
+	<field name="temps"
+			type="hidden"
+			label="temps"
+			description="temps"
+			class="inputbox"
+			size="30"
+			default="1"
+		/>
+		<field name="alias"
+			type="text"
+			label="JFIELD_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC"
+			class="inputbox"
+			size="30"
+		/>
+		
+		<field name="access"
+			type="accesslevel"
+			label="JFIELD_ACCESS_LABEL"
+			description="JFIELD_ACCESS_DESC"
+			class="inputbox"
+			size="1"
+		/>
+		
+		<field id="published"
+			name="published"
+			type="list"
+			label="JGLOBAL_STATE"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1"
+			default="1"
+		>
+			<option value="1">
+				JPUBLISHED</option>
+			<option value="0">
+				JUNPUBLISHED</option>
+			<option value="2">
+				JARCHIVED</option>
+			<option value="-2">
+				JTRASHED</option>
+			
+		</field>
+		
+		<field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL"
+			description="COM_EVENTTABLEEDIT_FIELD_LANGUAGE_DESC" class="inputbox"
+		>
+			<option value="*">JALL</option>
+		</field>
+		
+	</fieldset>
+	
+	<fieldset>
+		<field name="row"  required="true" type="number" label="COM_EVENTTABLEEDIT_FIELD_ROW" description="COM_EVENTTABLEEDIT_FIELD_ROW_DESC" class="inputbox" size="30"	/>
+		<field name="col" required="true" type="number" label="COM_EVENTTABLEEDIT_FIELD_COL" description="COM_EVENTTABLEEDIT_FIELD_COL_DESC" class="inputbox" size="30" />
+	</fieldset>
+	<fieldset name="details">
+	
+		<field name="normalorappointment" type="hidden" class="inputbox" default="1" label="COM_EVENTTABLEEDIT_FIELD_FUNCTION_LABEL" description="COM_EVENTTABLEEDIT_FIELD_FUNCTION_DESC"/>
+		
+		<field name="hours"  required="true" type="number" default="24" label="COM_EVENTTABLEEDIT_FIELD_HOURS" description="COM_EVENTTABLEEDIT_FIELD_HOURS_DESC" class="inputbox" size="30"	/>
+		
+		<field name="showdayname"
+			type="radio"
+			default="0"
+			class="inputbox"
+			label="COM_EVENTTABLEEDIT_SHOW_SHOWDAYNAME"
+			description="COM_EVENTTABLEEDIT_SHOW_SHOWDAYNAME_DESC">
+			<option
+				value="1">JYES</option>
+			<option
+				value="0">JNO</option>
+		</field>
+		
+		<field name="switcher" type="radio" default="0" class="inputbox" label="COM_EVENTTABLEEDIT_SHOW_SWITCHER" description="COM_EVENTTABLEEDIT_SHOW_SWITCHER_DESC">
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+		
+		
+		<field name="standardlayout"
+			type="list"
+			default="columntoggle"
+			class="inputbox"
+			label="COM_EVENTTABLEEDIT_STANDARD_LAYOUT"
+			description="COM_EVENTTABLEEDIT_STANDARD_LAYOUT_DESC">
+			<option value="columntoggle">COM_EVENTTABLEEDIT_LAYOUT_TOGGLE</option>
+			<option value="swipe">COM_EVENTTABLEEDIT_LAYOUT_SWIPE</option>
+			<option value="stack">COM_EVENTTABLEEDIT_LAYOUT_STACK</option>
+		</field>
+		
+		<field name="icsfilename" type="text" label="COM_EVENTTABLEEDIT_FIELD_ICSFILENAME_LABEL" required="true" description="COM_EVENTTABLEEDIT_FIELD_ICSFILENAME_DESC" class="inputbox" size="30" />
+		<field name="location"
+			type="text"
+			label="COM_EVENTTABLEEDIT_FIELD_LOCATION_LABEL"
+			description="COM_EVENTTABLEEDIT_FIELD_LOCATION_DESC"
+			class="inputbox"
+			size="30"
+			
+		 />
+		 
+		 <field name="summary" type="text" default="" label="COM_EVENTTABLEEDIT_FIELD_SUMMARY_LABEL" description="COM_EVENTTABLEEDIT_FIELD_SUMMARY_DESC" rows="10" cols="5" />
+		 
+		 <field name="displayname" type="text" label="COM_EVENTTABLEEDIT_FIELD_DISPLAYNAME_LABEL" description="COM_EVENTTABLEEDIT_FIELD_DISPLAYNAME_DESC" class="inputbox" size="30" 	 />
+		 
+		 <field name="email" type="email" label="COM_EVENTTABLEEDIT_FIELD_EMAIL_LABEL" description="COM_EVENTTABLEEDIT_FIELD_EMAIL_DESC" class="inputbox" size="30"  validate="email"	 />
+		 
+		 <field name="adminemailsubject" type="text" label="COM_EVENTTABLEEDIT_FIELD_ADMINEMAIL_LABEL" description="COM_EVENTTABLEEDIT_FIELD_ADMINEMAIL_DESC" class="inputbox" size="30"  />
+		 
+		 <field name="useremailsubject" type="text" label="COM_EVENTTABLEEDIT_FIELD_USEREMAIL_SUBJECT_LABEL" description="COM_EVENTTABLEEDIT_FIELD_USEREMAIL_SUBJECT_DESC" class="inputbox" size="30"   />
+		 
+		 
+		 <field name="useremailtext" width="400px"
+			type="editor"
+			default=""
+			label="COM_EVENTTABLEEDIT_FIELD_USEREMAIL_TEXT"
+			description="COM_EVENTTABLEEDIT_FIELD_USEREMAIL_TEXT"
+			class="inputbox"
+			filter="safehtml"
+			buttons="true"
+			
+			hide="readmore,pagebreak">
+		</field>
+		
+		<field name="adminemailtext" width="400px"
+			type="editor"
+			default=""
+			label="COM_EVENTTABLEEDIT_FIELD_ADMINEMAILTEXT_LABEL"
+			description="COM_EVENTTABLEEDIT_FIELD_ADMINEMAILTEXT_LABEL"
+			class="inputbox"
+			filter="safehtml"
+			buttons="true"
+			
+			hide="readmore,pagebreak">
+		</field>
+		
+		
+		<field name="showusernametoadmin"
+			type="radio"
+			default="0"
+			class="inputbox"
+			label="COM_EVENTTABLEEDIT_SHOW_SHOWUSERNAMETOADMIN"
+			description="COM_EVENTTABLEEDIT_SHOW_SHOWUSERNAMETOADMIN_DESC">
+			<option
+				value="1">JYES</option>
+			<option
+				value="0">JNO</option>
+		</field>
+		
+		<field name="showusernametouser"
+			type="radio"
+			default="0"
+			class="inputbox"
+			label="COM_EVENTTABLEEDIT_SHOW_SHOWUSERNAMETOUSER"
+			description="COM_EVENTTABLEEDIT_SHOW_SHOWUSERNAMETOUSER_DESC">
+			<option
+				value="1">JYES</option>
+			<option
+				value="0">JNO</option>
+		</field>
+		
+		<field name="addtitle"
+			type="radio"
+			class="inputbox"
+			default="0"
+			label="COM_EVENTTABLEEDIT_FIELD_TABLE_TITLE_LABEL"
+			description="COM_EVENTTABLEEDIT_FIELD_TABLE_TITLE_DESC">
+			<option
+				value="1">JSHOW</option>
+			<option
+				value="0">JHIDE</option>
+		</field>
+		
+		<field name="show_print_view"
+			type="radio"
+			class="inputbox"
+			default="0"
+			label="COM_EVENTTABLEEDIT_SHOW_PRINT_VIEW_LABEL"
+			description="COM_EVENTTABLEEDIT_SHOW_PRINT_VIEW_DESC">
+			<option
+				value="1">JSHOW</option>
+			<option
+				value="0">JHIDE</option>
+		</field>
+		
+		<field name="pretext"
+			type="editor"
+			default=""
+			label="COM_EVENTTABLEEDIT_PRETEXT_LABEL"
+			description="COM_EVENTTABLEEDIT_PRETEXT_DESC"
+			class="inputbox"
+			filter="safehtml"
+			buttons="true"
+			hide="readmore,pagebreak">
+		</field>
+		
+		<field name="aftertext"
+			type="editor"
+			default=""
+			label="COM_EVENTTABLEEDIT_AFTERTEXT_LABEL"
+			description="COM_EVENTTABLEEDIT_AFTERTEXT_DESC"
+			class="inputbox"
+			filter="safehtml"
+			buttons="true"
+			hide="readmore,pagebreak">
+		</field>
+
+	</fieldset>
+	
+	
+	
+	<fieldset name="custom" label="COM_EVENTTABLEEDIT_STYLE">
+		<field name="add_option_list"
+			type="radio"
+			class="inputbox"
+			default="0"
+			label="COM_EVENTTABLEEDIT_ADD_OPTION_LIST"
+			description="COM_EVENTTABLEEDIT_ADD_OPTION_LIST_DESC">
+			<option
+				value="1">JYES</option>
+			<option
+				value="0">JNO</option>
+			</field>
+	</fieldset>
+	<fieldset name="style" label="COM_EVENTTABLEEDIT_STYLE">
+		
+		<field name="dateformat" 
+			type="text"
+			class="inputbox"
+			label="COM_EVENTTABLEEDIT_DATEFORMAT_LABEL"
+			description="COM_EVENTTABLEEDIT_DATEFORMAT_DESC"
+			default="%d.%m.%Y"
+		/>
+		
+		<field name="timeformat" 
+			type="text"
+			class="inputbox"
+			label="COM_EVENTTABLEEDIT_TIMEFORMAT_LABEL"
+			description="COM_EVENTTABLEEDIT_TIMEFORMAT_DESC"
+			default="%H:%M"
+		/>
+		<field id="link_target"
+			name="link_target"
+			type="list"
+			label="COM_EVENTTABLEEDIT_LINK_TARGET_LABEL"
+			description="COM_EVENTTABLEEDIT_LINK_TARGET_DESC"
+			class="inputbox"
+			size="1"
+			default="_blank"
+		>
+			<option value="_blank">COM_EVENTTABLEEDIT_LINK_TARGET_NEW</option>
+			<option value="_self">COM_EVENTTABLEEDIT_LINK_TARGET_SELF</option>
+		</field>
+		
+	</fieldset>
+		
+	<fields name="metadata">
+	
+		<fieldset name="jmetadata" label="JGLOBAL_FIELDSET_METADATA_OPTIONS">
+
+		<field name="metakey"
+			type="textarea"
+			label="JFIELD_META_KEYWORDS_LABEL"
+			description="JFIELD_META_KEYWORDS_DESC"
+			class="inputbox"
+			default="Table"
+			rows="3"
+			cols="30"
+		 />
+
+		<field name="metadesc"
+			type="textarea"
+			label="JFIELD_META_DESCRIPTION_LABEL"
+			description="JFIELD_META_DESCRIPTION_DESC"
+			class="inputbox"
+			rows="3"
+			cols="30"
+		/>
+
+
+
+		<field name="robots"
+			type="list"
+			label="JFIELD_METADATA_ROBOTS_LABEL"
+			description="JFIELD_METADATA_ROBOTS_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="index, follow">JGLOBAL_INDEX_FOLLOW</option>
+			<option value="noindex, follow">JGLOBAL_NOINDEX_FOLLOW</option>
+			<option value="index, nofollow">JGLOBAL_INDEX_NOFOLLOW</option>
+			<option value="noindex, nofollow">JGLOBAL_NOINDEX_NOFOLLOW</option>
+		</field>
+
+			<field name="rights" type="text"
+				label="JFIELD_METADATA_RIGHTS_LABEL"
+				description="JFIELD_METADATA_RIGHTS_DESC"
+				size="20" />
+		</fieldset>
+		
+	</fields>
+	
+		
+	<fieldset name="acl" label="JGLOBAL_FIELDSET_ACL_OPTIONS">
+	
+		<field name="edit_own_rows"
+			type="radio"
+			default="0"
+			label="COM_EVENTTABLEEDIT_EDIT_OWN_ROWS_LABEL"
+			description="COM_EVENTTABLEEDIT_EDIT_OWN_ROWS_DESC">
+			<option
+				value="1">JYES</option>
+			<option
+				value="0">JNO</option>
+		</field>
+		<field id="rules"
+			name="rules"
+			type="rules"
+			label="COM_EVENTTABLEEDIT_ACL_HEADERTEXT_LABEL"
+			description="COM_EVENTTABLEEDIT_ACL_HEADERTEXT_DESC"
+			filter="rules"
+			validate="rules"
+			class="inputbox"
+			component="com_eventtableedit"
+			section="etetable"
+		/>
+	</fieldset>
+</form>

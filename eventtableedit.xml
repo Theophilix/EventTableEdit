@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+<!-- 'version' attribute for extension tag is no longer used -->
+
+    <name>Event Table Edit</name>
+    <!-- The following elements are optional and free of formatting constraints -->
+    <creationDate>Nov 2021</creationDate>
+    <!-- Dummy author, feel free to replace anywhere you see it-->
+    <author>Rahul Kaushik</author>
+    <authorUrl>http://www.eventtableedit.com</authorUrl>
+    <copyright>2007 - 2021 Theophilix and Rahul Kaushik</copyright>
+    <license>GPL v3</license>
+    <!--  The version string is recorded in the components table -->
+    <version>1.0.0</version>
+    <!-- The description is optional and defaults to the name -->
+    <description>COM_EVENTTABLEEDIT_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+    <namespace path="src/">ETE\Component\EventTableEdit</namespace>
+	
+	<files folder="site/">
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>helper</folder>
+        <folder>template</folder>
+    </files>
+	
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_eventtableedit.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.com_eventtableedit.ini</language>
+	</languages>
+	
+	
+    <install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+    <administration>
+        <!-- The link that will appear in the Admin panel's "Components" menu -->
+        <menu link="index.php?option=com_eventtableedit">Event Table Edit</menu>
+		<submenu>
+			<menu link="option=com_eventtableedit&amp;view=etetables" view="etetables" img="components/com_eventtableedit/template/images/menu/etetables.png">COM_EVENTTABLEEDIT_TABLES</menu>
+			<menu link="option=com_eventtableedit&amp;view=appointmenttables" view="appointmenttables" img="components/com_eventtableedit/template/images/menu/etetables.png">COM_APPOINTMENTTABLEEDIT_TABLES</menu>
+			<menu link="option=com_eventtableedit&amp;view=dropdowns" view="dropdowns" img="components/com_eventtableedit/template/images/menu/dropdowns.png">COM_EVENTTABLEEDIT_DROPDOWNS</menu>
+			<menu link="option=com_eventtableedit&amp;view=csvimport" view="csvimport" img="components/com_eventtableedit/template/images/menu/import.png">COM_EVENTTABLEEDIT_CSV_IMPORT</menu>
+			<menu link="option=com_eventtableedit&amp;view=csvexport" view="csvexport" img="components/com_eventtableedit/template/images/menu/export.png">COM_EVENTTABLEEDIT_CSV_EXPORT</menu>
+			<menu link="option=com_eventtableedit&amp;view=xmlimport" view="xmlimport" img="components/com_eventtableedit/template/images/menu/import.png">COM_EVENTTABLEEDIT_MENUXML_IMPORT</menu>
+			<menu link="option=com_eventtableedit&amp;view=xmlexport" view="xmlexport" img="components/com_eventtableedit/template/images/menu/export.png">COM_EVENTTABLEEDIT_MENUXML_EXPORT</menu>
+		</submenu>
+        <files folder="admin/">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>eventtableedit.xml</filename>
+			<folder>forms</folder>
+			<folder>images</folder>
+            <folder>services</folder>
+            <folder>src</folder>
+			<folder>sql</folder>
+            <folder>tmpl</folder>
+        </files>
+		
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_eventtableedit.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_eventtableedit.sys.ini</language>
+			<language tag="de-DE">language/de-DE/de-DE.com_eventtableedit.ini</language>
+			<language tag="de-DE">language/de-DE/de-DE.com_eventtableedit.sys.ini</language>
+		</languages>
+		
+    </administration>
+
+</extension>

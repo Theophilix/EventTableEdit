@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<access component="com_eventtableedit">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		<action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+		<action name="core.delete" title="COM_EVENTTABLEEDIT_ACL_ADMIN_DELETE" description="COM_EVENTTABLEEDIT_ACL_ADMIN_DELETE_DESC" />
+		<action name="core.csv" title="COM_EVENTTABLEEDIT_ACL_CSV" description="COM_EVENTTABLEEDIT_ACL_CSV_DESC" />
+	</section>
+	<section name="etetable">
+		<action name="core.add" title="COM_EVENTTABLEEDIT_ACL_ADD" description="COM_EVENTTABLEEDIT_ACL_ADD_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="COM_EVENTTABLEEDIT_ACL_EDIT_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="COM_EVENTTABLEEDIT_ACL_DELETE_DESC" />
+		<action name="core.reorder" title="COM_EVENTTABLEEDIT_ACL_REORDER" description="COM_EVENTTABLEEDIT_ACL_REORDER_DESC" />
+		<action name="core.create_admin" title="COM_EVENTTABLEEDIT_ACL_CREATE_ADMIN" description="COM_EVENTTABLEEDIT_ACL_CREATE_ADMIN_DESC" />
+		<action name="core.csv" title="COM_EVENTTABLEEDIT_ACL_CSV" description="COM_EVENTTABLEEDIT_ACL_CSV_DESC" />
+	</section>
+</access>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="COM_EVENTTABLEEDIT_CHANGETABLE_VIEW_DEFAULT_TITLE">
+    <message>
+      <![CDATA[COM_EVENTTABLEEDIT_CHANGETABLE_VIEW_DEFAULT_DESC]]>
+    </message>
+  </layout>
+  
+  <fields name="request">
+  	<fieldset name="request">
+		 <field name="id" type="sql" default="10" label="Select Table" query="SELECT id, name FROM #__eventtableedit_details WHERE published = 1 ORDER BY name ASC" key_field="id" value_field="name"
+
+        required="true"
+         >
+         <option value="">Select table</option>
+       </field>
+	</fieldset>
+  </fields>
+</metadata>

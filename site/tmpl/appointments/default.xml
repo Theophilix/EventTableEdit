@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="COM_EVENTTABLEEDIT_ETETABLE_VIEW_APPOINTMENT">
+    <message>
+      <![CDATA[COM_EVENTTABLEEDIT_ETETABLE_VIEW_APPOINTMENT_DESC]]>
+    </message>
+  </layout>
+  
+  <fields name="request">
+  	<fieldset name="request">
+	
+        <field name="id" type="sql" default="10" label="Select Table" query="SELECT id, name FROM #__eventtableedit_details WHERE published = 1 AND normalorappointment=1 ORDER BY name ASC" key_field="id" value_field="name"
+
+        required="true"
+         >
+         <option value="">Select table</option>
+       </field>
+	</fieldset>
+  </fields>
+</metadata>
