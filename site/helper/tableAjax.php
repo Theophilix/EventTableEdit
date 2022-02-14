@@ -541,6 +541,10 @@ function newRow_<?php echo $this->unique; ?>() {
 			}
 			$('tr#rowId_' + nmbPageRows).css('display', 'table-row');
 		}, 10);
+		<?php if ($this->item->show_pagination) { ?>
+		jQuery("#etetable-table_<?php echo $this->unique; ?> tbody").attr("data-firstRecord", Math.floor(jQuery("#etetable-table_<?php echo $this->unique; ?> tbody tr").length/<?php echo $this->item->pagebreak; ?>)*<?php echo $this->item->pagebreak; ?>);		
+		paginate_<?php echo $this->unique; ?>(Math.floor(jQuery("#etetable-table_<?php echo $this->unique; ?> tbody tr").length/<?php echo $this->item->pagebreak; ?>)*<?php echo $this->item->pagebreak; ?>, '<?php echo $this->item->pagebreak; ?>', "#etetable-table_<?php echo $this->unique; ?>", "#etetable-table_<?php echo $this->unique; ?> tbody tr");
+		<?php } ?>
 	});
 }
 
