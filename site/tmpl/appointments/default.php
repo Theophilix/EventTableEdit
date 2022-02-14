@@ -35,11 +35,24 @@ if (isset($requests['print'])) {
 	<?php if ($this->item->show_print_view) :?>
 	<li class="print-icon">
 		<?php if (!$this->print) : ?>
-			<?php echo str_replace('view=etetable', 'view=appointments', JHtml::_('icon.print_popup', $this->item, $this->params)); ?>
-			<?php //echo JHtml::_('icon.print_popup',  $this->item, $this->params);?>
+			<?php
+			$url = 'index.php?option=com_eventtableedit&id='.$this->item->slug . '&tmpl=component&print=1&view=appointments&layout=print&limit=0&limitstart=0&filterstring='.$this->params->get('filterstring').'&Itemid=' . $Itemid;
+			$status = 'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no';
+			
+			$text = JHTML::_('image', JURI::base().'/components/com_eventtableedit/template/images/printButton.png', JText::_('JGLOBAL_PRINT'), null, true);
+
+			$attribs['title'] = JText::_('JGLOBAL_PRINT');
+			$attribs['onclick'] = "window.open(this.href,'win2','".$status."'); return false;";
+			$attribs['rel'] = 'nofollow';
+
+			echo JHTML::_('link', Route::_($url), $text, $attribs);
+			?>
 		<?php else : ?>
-			<?php echo JHtml::_('icon.print_screen', $this->item, $this->params); ?>
-		<?php endif; ?>
+			<?php 			
+			$text = JHTML::_('image', JURI::base().'/components/com_eventtableedit/template/images/printButton.png', JText::_('JGLOBAL_PRINT'), null, true);
+			echo '<a href="#" onclick="window.print();return false;">'.$text.'</a>';
+			?>
+		<?php endif; ?>		
 	</li>
 	<?php endif; ?>
 

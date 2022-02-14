@@ -39,6 +39,8 @@ class HtmlView extends BaseHtmlView {
 		
         $main = $app->input;
 		
+		$this->print = $main->get('print', 0);
+		
 		$this->params = $app->getParams();
         $this->params->merge($this->item->params);
 		
@@ -187,38 +189,38 @@ class HtmlView extends BaseHtmlView {
             }
         }
 
-
-        $doc = Factory::getDocument();
-		
-		$wa = $this->document->getWebAssetManager();
-		$wa->useScript('core');
-		$wa->useScript('jquery');
-		$wa->useScript('field.calendar');
-		$wa->useScript('field.calendar.helper');
-		
-		$this->document->addScript('//code.jquery.com/ui/1.13.1/jquery-ui.js');
-        
-		require JPATH_SITE.'/components/com_eventtableedit/helper/phpToJs.php';
-		
-		$this->document->addScript($this->baseurl.'/components/com_eventtableedit/template/js/tablesaw.js');
-		$this->document->addScript($this->baseurl.'/components/com_eventtableedit/template/js/tablesaw-init.js');
-		
-		
-		
-		//echo "<script src='".$this->baseurl.'/components/com_eventtableedit/helper/tableAjax.js'."'>";
-		require JPATH_SITE.'/components/com_eventtableedit/helper/tableAjax.php';
-		require JPATH_SITE.'/components/com_eventtableedit/helper/popup.php';
-		echo "</script>";
-		$user = Factory::GetUser();
-		if(in_array(8,$user->groups)){
-			//$this->document->addScript($this->baseurl.'/components/com_eventtableedit/helper/popup.js');
-			$style = '.etetable-linecolor0{background-color:#fff;}';
-			$this->document->addStyleDeclaration( $style );			
-		}
-		
-		if ($this->item->rowsort == 0) {
-		$this->document->addStyleDeclaration(".eventtableedit .tablesaw-priority-50 {display: none !important;}");;
-		$this->document->addStyleDeclaration(".eventtableedit .tablesaw-priority-60 {display: none !important;}");;
+		if ($this->print) {
+            $this->preparePrintView();
+        } else {
+			
+			$doc = Factory::getDocument();
+			
+			$wa = $this->document->getWebAssetManager();
+			$wa->useScript('core');
+			$wa->useScript('jquery');
+			$wa->useScript('field.calendar');
+			$wa->useScript('field.calendar.helper');
+			
+			$this->document->addScript('//code.jquery.com/ui/1.13.1/jquery-ui.js');
+			
+			require JPATH_SITE.'/components/com_eventtableedit/helper/phpToJs.php';
+			
+			$this->document->addScript($this->baseurl.'/components/com_eventtableedit/template/js/tablesaw.js');
+			$this->document->addScript($this->baseurl.'/components/com_eventtableedit/template/js/tablesaw-init.js');		
+			
+			require JPATH_SITE.'/components/com_eventtableedit/helper/tableAjax.php';
+			require JPATH_SITE.'/components/com_eventtableedit/helper/popup.php';
+			
+			$user = Factory::GetUser();
+			if(in_array(8,$user->groups)){
+				$style = '.etetable-linecolor0{background-color:#fff;}';
+				$this->document->addStyleDeclaration( $style );			
+			}
+			
+			if ($this->item->rowsort == 0) {
+				$this->document->addStyleDeclaration(".eventtableedit .tablesaw-priority-50 {display: none !important;}");;
+				$this->document->addStyleDeclaration(".eventtableedit .tablesaw-priority-60 {display: none !important;}");;
+			}
 		}
     }
 	
@@ -245,5 +247,12 @@ class HtmlView extends BaseHtmlView {
         $ie .= '<![endif]-->'."\n";
 
         return $ie;
+    }
+	private function preparePrintView()
+    {
+        $this->document->setMetaData('robots', 'noindex, nofollow');
+        $this->params->set('access-add', 0);
+        $this->params->set('access-create_admin', 0);
+        $this->item->show_filter = 0;
     }
 }
