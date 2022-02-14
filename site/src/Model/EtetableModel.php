@@ -338,12 +338,12 @@ class EtetableModel extends ItemModel
 			$order_dir = explode(",",$this->_item->automate_sort_column);
 			
 			
-			if(isset($order_dir[0]) && isset($order_dir[1])){
+			if(isset($order_dir[0]) && isset($order_dir[1]) && $orderCol==$order_dir[0] && $orderDirn==$order_dir[1]){
 				$orderCol = $order_dir[0]; 
 				$orderDirn = $order_dir[1];
 			}else{
-				$orderCol = '';
-				$orderDirn = '';
+				//$orderCol = '';
+				//$orderDirn = '';
 			}
         }
         if ($orderCol && $orderDirn) {
@@ -359,7 +359,7 @@ class EtetableModel extends ItemModel
             $query->where($ex[0]);
             $query->where($ex[1]);
         }
-        //echo $query."<br>";die;
+        //echo $query;
         return $query;
     }
 	
