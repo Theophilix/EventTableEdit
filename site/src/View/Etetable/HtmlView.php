@@ -43,7 +43,7 @@ class HtmlView extends BaseHtmlView {
         $this->dropdowns = $this->get('Dropdowns');
         $this->rows = $this->get('Rows');
         $main = $app->input;
-        $this->print = $main->get('print');
+        $this->print = $main->get('print', 0);
         $filterstring = $main->get('filterstring');
 		
 		$this->params = $app->getParams();
@@ -286,6 +286,13 @@ class HtmlView extends BaseHtmlView {
         $ie .= '<![endif]-->'."\n";
 
         return $ie;
+    }
+	private function preparePrintView()
+    {
+        $this->document->setMetaData('robots', 'noindex, nofollow');
+        $this->params->set('access-add', 0);
+        $this->params->set('access-create_admin', 0);
+        $this->item->show_filter = 0;
     }
 
 }

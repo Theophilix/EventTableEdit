@@ -171,18 +171,31 @@ foreach ($this->heads as $headSort) {
 
 <ul class="actions">
 	<?php 
-	//echo HTMLHelper::_('icons.print_popup', $this->item, $this->params);
-	/* if ($this->item->show_print_view) :?>
+	if ($this->item->show_print_view) :?>
 	<li class="print-icon">
 		<?php if (!$this->print) : ?>
-			<?php echo HTMLHelper::_('icon.print_popup', $this->item, $this->params); ?>
+			<?php
+			$url = 'index.php?option=com_eventtableedit&id='.$this->item->slug . '&tmpl=component&print=1&view=etetable&layout=print&limit=0&limitstart=0&filterstring='.$this->params->get('filterstring').'&Itemid=' . $Itemid;
+			$status = 'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no';
+			
+			$text = JHTML::_('image', JURI::base().'/components/com_eventtableedit/template/images/printButton.png', JText::_('JGLOBAL_PRINT'), null, true);
+
+			$attribs['title'] = JText::_('JGLOBAL_PRINT');
+			$attribs['onclick'] = "window.open(this.href,'win2','".$status."'); return false;";
+			$attribs['rel'] = 'nofollow';
+
+			echo JHTML::_('link', Route::_($url), $text, $attribs);
+			?>
 		<?php else : ?>
-			<?php echo HTMLHelper::_('icon.print_screen', $this->item, $this->params); ?>
+			<?php 			
+			$text = JHTML::_('image', JURI::base().'/components/com_eventtableedit/template/images/printButton.png', JText::_('JGLOBAL_PRINT'), null, true);
+			echo '<a href="#" onclick="window.print();return false;">'.$text.'</a>';
+			?>
 		<?php endif; ?>
 	</li>
-	<?php endif;*/ ?>
+	<?php endif; ?>
 
-	<?php if ($this->params->get('access-create_admin')) :?>
+	<?php if ($this->params->get('access-create_admin') && !$this->print) :?>
 	<li class="admin-icon">
 		<?php if ($this->heads) :?>
 			<?php 
@@ -197,12 +210,11 @@ foreach ($this->heads as $headSort) {
 			$url = 'index.php?option=com_eventtableedit&view=changetable&id='.$this->item->slug.'&Itemid=' . $Itemid;
 			$button = JHTML::_('image', JURI::base().'/components/com_eventtableedit/template/images/edit.png', JText::_('COM_EVENTTABLEEDIT_ETETABLE_ADMIN'), null, true);
 			$attribs['title'] = JText::_('COM_EVENTTABLEEDIT_ETETABLE_CREATE');
-			echo JHTML::_('link', Route::_($url), $button, $attribs);
-			//echo JHTML::_('icon.adminTable', $this->item, JText::_('COM_EVENTTABLEEDIT_ETETABLE_CREATE')); ?>
+			echo JHTML::_('link', Route::_($url), $button, $attribs); ?>
 		<?php endif; ?>
 	</li>
 	<?php endif;  ?>
-	<?php if ($this->params->get('access-csv')) :?>
+	<?php if ($this->params->get('access-csv') && !$this->print) :?>
 	<li class="admin-icon">
 		<a href="<?php echo Route::_('index.php?option=com_eventtableedit&view=csvexport&id=' . $this->item->id .'&Itemid=' . $Itemid . '&return=' . base64_encode(JUri::getInstance()))?>" title="<?php echo JText::_('COM_EVENTTABLEEDIT_ETETABLE_EXPORT')?>">
 			<img src="components/com_eventtableedit/template/images/csv-download.png" alt="<?php echo JText::_('COM_EVENTTABLEEDIT_ETETABLE_EXPORT')?>"/>
