@@ -332,7 +332,7 @@ if ($this->item->scroll_table) {
 $document = Factory::getDocument();
 $style = '
 .paginate_'. $this->unique.'{
-	width: 20px;
+	width: 30px;
 	height: 20px;
 	text-align: center;
 	border: solid 1px #ccc;
@@ -340,6 +340,7 @@ $style = '
 	float: left;
 	color: #000;
 	text-decoration: none;
+	line-height: 14px;
 }
 .paginate_'.$this->unique.':hover, .paginate_'.$this->unique.':active, .paginate_'.$this->unique.':focus{
 	text-decoration: none;
