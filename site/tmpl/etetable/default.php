@@ -199,7 +199,7 @@ foreach ($this->heads as $headSort) {
 	<li class="admin-icon">
 		<?php if ($this->heads) :?>
 			<?php 
-			
+			$attribs = array();
 			$url = 'index.php?option=com_eventtableedit&view=changetable&id='.$this->item->slug.'&Itemid=' . $Itemid;
 			$button = JHTML::_('image', JURI::base().'/components/com_eventtableedit/template/images/edit.png', JText::_('COM_EVENTTABLEEDIT_ETETABLE_ADMIN'), null, true);
 			$attribs['title'] = JText::_('COM_EVENTTABLEEDIT_ETETABLE_ADMIN');
@@ -207,6 +207,7 @@ foreach ($this->heads as $headSort) {
 			?>
 		<?php else: ?>
 			<?php 
+			$attribs = array();
 			$url = 'index.php?option=com_eventtableedit&view=changetable&id='.$this->item->slug.'&Itemid=' . $Itemid;
 			$button = JHTML::_('image', JURI::base().'/components/com_eventtableedit/template/images/edit.png', JText::_('COM_EVENTTABLEEDIT_ETETABLE_ADMIN'), null, true);
 			$attribs['title'] = JText::_('COM_EVENTTABLEEDIT_ETETABLE_CREATE');
