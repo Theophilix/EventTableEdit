@@ -13,7 +13,7 @@
 		<field
             name="id"
 			addfieldprefix="ETE\Component\EventTableEdit\Administrator\Field" 
-            type="tablenumber"
+            type="tableNumber"
            	label="COM_EVENTTABLEEDIT_TABLE_NUMBER_LABEL"
 			description="COM_EVENTTABLEEDIT_TABLE_NUMBER_DESC"
       required="true"
