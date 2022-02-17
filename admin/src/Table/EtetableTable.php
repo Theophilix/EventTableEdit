@@ -184,4 +184,16 @@ class EtetableTable extends Table implements VersionableTableInterface
 		
 		return true;
 	}
+	
+	protected function _getAssetName()
+	{
+		$keys = array();
+
+		foreach ($this->_tbl_keys as $k)
+		{
+			$keys[] = (int) $this->$k;
+		}
+
+		return $this->typeAlias . '.' . implode('.', $keys);
+	}
 }
