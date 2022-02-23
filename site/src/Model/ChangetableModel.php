@@ -265,8 +265,32 @@ class ChangetableModel extends ItemModel
             $map_datatype = $this->delete_all_between('(', ')', strtoupper(\Datatypes::mapDatatypes($datatype)));
 
             if (strtoupper($new_datatype) !== $map_datatype) {
+				
+				if ('int' == $datatype) {
+					$q1 = 'UPDATE  #__eventtableedit_rows_'.$this->id.'  SET head_'.$newId.' = "0"';
+					$this->db->setQuery($q1);
+					$this->db->execute();
+				}
+				if ('time' == $datatype) {
+					$q1 = 'UPDATE  #__eventtableedit_rows_'.$this->id.'  SET head_'.$newId.' = "00:00"';
+					$this->db->setQuery($q1);
+					$this->db->execute();
+				}
+				if ('text' == $datatype) {
+					$q2 = 'UPDATE  #__eventtableedit_rows_'.$this->id.'  SET head_'.$newId.' = null';
+					$this->db->setQuery($q2);
+					$this->db->execute();
+				}
+				
+				if ('date' == $datatype) {
+					$q2 = 'UPDATE  #__eventtableedit_rows_'.$this->id.'  SET head_'.$newId.' = "0000-00-00"';
+					$this->db->setQuery($q2);
+					$this->db->execute();
+				}
+				
+				
                 $query .= 'CHANGE head_'.$newId.' head_'.$newId.' '.\Datatypes::mapDatatypes($datatype);
-                echo $query.'<br>';
+                
                 $this->db->setQuery($query);
                 $this->db->execute();
 

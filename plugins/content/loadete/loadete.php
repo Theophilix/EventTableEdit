@@ -141,7 +141,7 @@ class PlgContentLoadete extends JPlugin
 		$wa->useScript('field.calendar');
 		$wa->useScript('field.calendar.helper');
 		$document->addScript('//code.jquery.com/ui/1.13.1/jquery-ui.js');
-		
+		$document->addScript(JURI:: base().'/media/system/js/fields/calendar-locales/date/gregorian/date-helper.js');
 		
         require_once JPATH_SITE.''.DIRECTORY_SEPARATOR.'components'.DIRECTORY_SEPARATOR.'com_eventtableedit'.DIRECTORY_SEPARATOR.'helper'.DIRECTORY_SEPARATOR.'etetable.php';
         $language = Factory::getLanguage();
