@@ -17,7 +17,7 @@ require_once JPATH_SITE.'/components/com_eventtableedit/helper/etetable.php';
 class AppointmentsModel extends ItemModel
 {
 	
-	protected $_context = 'com_eventtableedit.etetable';
+	protected $_context = 'com_eventtableedit.appointmenttable';
 	
 	public function __construct()
     {
@@ -65,7 +65,7 @@ class AppointmentsModel extends ItemModel
 		$user = Factory::getUser();
 
 		// If $pk is set then authorise on complete asset, else on component only
-		$asset = empty($pk) ? 'com_eventtableedit' : 'com_eventtableedit.appointments.' . $pk;
+		$asset = empty($pk) ? 'com_eventtableedit' : 'com_eventtableedit.appointmenttable.' . $pk;
 		
 	}
 	
@@ -133,7 +133,7 @@ class AppointmentsModel extends ItemModel
         $user = Factory::getUser();
         $groups = $user->getAuthorisedViewLevels();
 
-        $asset = 'com_eventtableedit.etetable.'.$data->id;
+        $asset = 'com_eventtableedit.appointmenttable.'.$data->id;
 
         $data->params->set('access-view', in_array($data->access, $groups));
 
