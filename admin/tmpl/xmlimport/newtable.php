@@ -59,7 +59,7 @@ $wa->useScript('core')
 				
 			</li>
 			</ul>
-			<table id="datatypeTable" border="0" width="90%">
+			<table id="datatypeTable" border="0" width="50%">
 				<?php for ($a = 0; $a < count($this->headLine); ++$a) :
                     if ('timestamp' !== $this->headLine[$a]):
                     ?>

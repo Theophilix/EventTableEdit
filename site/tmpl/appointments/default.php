@@ -117,7 +117,7 @@ if (1 === (int)$this->item->addtitle) { ?>
         //$session = JFactory::getSession();
         //$corresponding_table = $session->get('corresponding_table');
     ?>
-		<div class="etetable-options" style="position: absolute;top: 10px;left: 0;">
+		<div class="etetable-options">
 			<?php
             $corresptables = json_decode($this->item->corresptable, true);
             if (!empty($corresptables)) {
@@ -201,7 +201,7 @@ jQuery(document).ready(function() {
 jQuery(document).ready(function(){
 	jQuery("#corresponding_table").change(function(){
 		var val = jQuery(this).val();
-		jQuery.post( "<?php echo JURI::root(); ?>/index.php?option=com_eventtableedit&task=etetable.setSessionOption", {'corresponding_table':val} , function( data ) {
+		jQuery.post( "<?php echo JURI::root(); ?>index.php?option=com_eventtableedit&task=etetable.setSessionOption", {'corresponding_table':val} , function( data ) {
 			window.location.reload();
 		});
 	})
