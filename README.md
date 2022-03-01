@@ -13,6 +13,8 @@ Download latest version 1.0.0 (release date: 01.03.2022): https://github.com/The
 
 Download older versions here: https://github.com/Theophilix/EventTableEdit/releases.
 
+If needed, you can find ETE for Joomla 3.x here: https://github.com/Theophilix/event-table-edit-old
+
 Version history: scroll down to "II".
 
 ## I Features:
@@ -77,3 +79,12 @@ Choose or select:
 - Activate table scroll function, define height
 
 Please post all feature requests in the issues tab.
+
+## II Version history
+
+**For version 1.0.0:**
+
+Version numbers (compare old ETE here: https://github.com/Theophilix/event-table-edit-old) have been reset as massive changes had to be made for Joomla 8.x.
+
+
+
