@@ -8,7 +8,7 @@ Download the newest version of the plugin here: https://github.com/Theophilix/Ev
 
 ## I Features:
 
-- Editable table (insert pictures, BBCode...)
+- Editable table (insert pictures, BBCode thanks to https://github.com/milesj/decoda ...)
 - Sorting options (A-Z, Z-A, natural sorting is used)
 - Choice of layout mode (stack, swipe, toggle) for enhanced responsiveness
 - Instant filter / search
