@@ -18,7 +18,7 @@ Version history: scroll down to "II".
 
 ## I Features:
 
-- Editable table (insert pictures, BBCode thanks to https://github.com/milesj/decoda with option to blacklist offensive words, embed videos from different platforms etc ...)
+- Editable table (insert pictures, BBCode...)
 - Sorting options (A-Z, Z-A, natural sorting is used)
 - Choice of layout mode (stack, swipe, toggle) for enhanced responsiveness
 - Instant filter / search
@@ -30,6 +30,7 @@ Version history: scroll down to "II".
   and import settings (separator, values in quotes or not)
 - CSV Export
 - XML import and export: import and export a table (normal or appointment) with all settings
+- Support for BB-Code (including emoticons and option to censor offensive words, embed videos from different platforms etc, more info: https://github.com/milesj/decoda)
 - Own CSS based template
 - A small additional plugin ("Content - Load ETE") allows users to display two or more tables in an article. It is installed automatically but can be uninstalled without any consequences if this function is not desired.
 
@@ -62,7 +63,7 @@ a) General
 - Enable automatic column sorting when table is loaded
 - Use Metadata
 - Enhanced SEO
-- Support for BB-Code (including emoticons and option to censor offensive words, more info: https://github.com/milesj/decoda)
+
 
 b) Layout / Style
 
