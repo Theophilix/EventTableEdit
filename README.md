@@ -2,10 +2,18 @@
 
 Event Table Edit (abbrev. ETE) is a free and open source table plugin for Joomla 4.x and PHP 8.
 
-With the plugin, you can create a responsive, editable table with CSV import and export function and XML export/import for table settings. It also has a full rights management (Joomla ACL). A small additional plugin (Content - Load ETE) allows users to display two or more tables in an article. It is installed automatically, but can be uninstalled without any consequences if this function is not desired.
-With the plugin, you can also create a table to setup an appointment booking system with confirmation emails for users and the admin, including iCal calendar files for for users and the admin in the attachment. Moreover, you can use the booking system to create a volunteer table for an event, where volunteers can enter their names if they want to help for a certain time. As it is based on a CSS-template, the layout of the table can be changed easily. The responsive function is based on the "Column Toggle Table with Mini Map" from the tablesaw plugins (https://github.com/filamentgroup/tablesaw).
+With the plugin, you can create a **responsive, editable table** with CSV import and export function and XML export/import for table settings. It also has a full rights management (Joomla ACL). A small additional plugin (Content - Load ETE) allows users to display two or more tables in an article. It is installed automatically, but can be uninstalled without any consequences if this function is not desired.
 
-Download the newest version of the plugin here: https://github.com/Theophilix/EventtableeditNeo/archive/refs/heads/main.zip. 
+With the plugin, you can also create a table to setup an **appointment booking system** with confirmation emails for users and the admin, including iCal calendar files for for users and the admin in the attachment. Moreover, you can use the booking system to create a volunteer table for an event, where volunteers can enter their names if they want to help for a certain time. As it is based on a CSS-template, the layout of the table can be changed easily. The responsive function is based on the "Column Toggle Table with Mini Map" from the tablesaw plugins (https://github.com/filamentgroup/tablesaw).
+
+Download the newest version of the plugin here: . 
+Try all the functions (including backend) on the demo site: https://demo.eventtableedit.com. Log in as user or admin with the given login credentials.
+
+Download latest version 1.0.0 (release date: 01.03.2022): https://github.com/Theophilix/EventTableEdit/archive/refs/heads/main.zip.
+
+Download older versions here: https://github.com/Theophilix/EventTableEdit/releases.
+
+Version history: scroll down to "II".
 
 ## I Features:
 
@@ -22,7 +30,7 @@ Download the newest version of the plugin here: https://github.com/Theophilix/Ev
 - CSV Export
 - XML import and export: import and export a table (normal or appointment) with all settings
 - Own CSS based template
-- A small additional plugin ("Content - Load ETE") allows users to display two or more tables in an article (since 4.8.4). It is installed automatically but can be uninstalled without any consequences if this function is not desired.
+- A small additional plugin ("Content - Load ETE") allows users to display two or more tables in an article. It is installed automatically but can be uninstalled without any consequences if this function is not desired.
 
 Frontend view options:
 - Sort columns (setting in rights management)
@@ -31,7 +39,7 @@ Frontend view options:
 - Filter rows / Instant search
 - Pagination
 - Print view
-- Administer table (setting in rights management) with quick csv export and import (new since 4.8.7)
+- Administer table (setting in rights management) with quick csv export and import
 
 
 Backend options:
