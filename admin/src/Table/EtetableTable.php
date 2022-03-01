@@ -171,6 +171,12 @@ class EtetableTable extends Table implements VersionableTableInterface
 		// Delete heads
         
 		$db = Factory::getDbo();
+		
+		$query = 'DELETE FROM #__assets'.
+                 ' WHERE name = "'.$this->_getAssetName() . '"';
+        $db->setQuery($query);
+        $db->execute();
+		
         $query = 'DELETE FROM #__eventtableedit_heads'.
                  ' WHERE table_id = '.$pk;
         $db->setQuery($query);
