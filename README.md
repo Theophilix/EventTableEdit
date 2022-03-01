@@ -1,14 +1,15 @@
 # EventTableEdit
 
-Welcome to our new Event Table Edit repository. We rebuild Event Table Edit (https://github.com/Theophilix/event-table-edit) from scratch for Joomla 4.x and PHP 8.
+Event Table Edit (abbrev. ETE) is a free and open source table plugin for Joomla 4.x and PHP 8.
 
-With the plugin, you can create a responsive, editable table with CSV import and export function and XML export/import for table settings. It also has a full rights management (Joomla ACL). A small additional plugin (Content - Load ETE) allows users to display two or more tables in an article. It is installed automatically, but can be uninstalled without any consequences if this function is not desired. You can transform the table into an appointment booking system with confirmation emails for users and the admin, including iCal calendar files for both in the attachment. Moreover, you can use the booking system to create a volunteer table for an event, where volunteers can enter their names if they want to help for a certain time. As it is based on a CSS-template, the layout of the table can be changed easily. The responsive function is based on the "Column Toggle Table with Mini Map" from the tablesaw plugins (https://github.com/filamentgroup/tablesaw).
+With the plugin, you can create a responsive, editable table with CSV import and export function and XML export/import for table settings. It also has a full rights management (Joomla ACL). A small additional plugin (Content - Load ETE) allows users to display two or more tables in an article. It is installed automatically, but can be uninstalled without any consequences if this function is not desired.
+With the plugin, you can also create a table to setup an appointment booking system with confirmation emails for users and the admin, including iCal calendar files for for users and the admin in the attachment. Moreover, you can use the booking system to create a volunteer table for an event, where volunteers can enter their names if they want to help for a certain time. As it is based on a CSS-template, the layout of the table can be changed easily. The responsive function is based on the "Column Toggle Table with Mini Map" from the tablesaw plugins (https://github.com/filamentgroup/tablesaw).
 
 Download the newest version of the plugin here: https://github.com/Theophilix/EventtableeditNeo/archive/refs/heads/main.zip. 
 
 ## I Features:
 
-- Editable table (insert pictures, BBCode thanks to https://github.com/milesj/decoda ...)
+- Editable table (insert pictures, BBCode thanks to https://github.com/milesj/decoda with option to blacklist offensive words, embed videos from different platforms etc ...)
 - Sorting options (A-Z, Z-A, natural sorting is used)
 - Choice of layout mode (stack, swipe, toggle) for enhanced responsiveness
 - Instant filter / search
