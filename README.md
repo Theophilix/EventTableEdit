@@ -1,4 +1,4 @@
-# EventtableeditNeo
+# EventTableEdit
 
 Welcome to our new Event Table Edit repository. We rebuild Event Table Edit (https://github.com/Theophilix/event-table-edit) from scratch for Joomla 4.x and PHP 8.
 
