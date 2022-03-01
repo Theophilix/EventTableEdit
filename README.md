@@ -6,14 +6,13 @@ With the plugin, you can create a **responsive, editable table** with CSV import
 
 With the plugin, you can also create a table to setup an **appointment booking system** with confirmation emails for users and the admin, including iCal calendar files for for users and the admin in the attachment. Moreover, you can use the booking system to create a volunteer table for an event, where volunteers can enter their names if they want to help for a certain time. As it is based on a CSS-template, the layout of the table can be changed easily. The responsive function is based on the "Column Toggle Table with Mini Map" from the tablesaw plugins (https://github.com/filamentgroup/tablesaw).
 
-Download the newest version of the plugin here: . 
 Try all the functions (including backend) on the demo site: https://demo.eventtableedit.com. Log in as user or admin with the given login credentials.
 
-Download latest version 1.0.0 (release date: 01.03.2022): https://github.com/Theophilix/EventTableEdit/archive/refs/heads/main.zip.
+Download latest version 1.0.0 (release date: 01.03.2022) here: https://github.com/Theophilix/EventTableEdit/archive/refs/heads/main.zip.
 
-Download older versions here: https://github.com/Theophilix/EventTableEdit/releases.
+Download older releases here: https://github.com/Theophilix/EventTableEdit/releases.
 
-If needed, you can find ETE for Joomla 3.x here: https://github.com/Theophilix/event-table-edit-old
+If needed, you can find ETE for Joomla 3.x as an archive here: https://github.com/Theophilix/event-table-edit-old
 
 Version history: scroll down to "II".
 
