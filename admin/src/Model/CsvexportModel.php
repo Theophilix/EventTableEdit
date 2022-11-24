@@ -425,7 +425,7 @@ class CsvexportModel extends AdminModel
 
         $this->heads = [];
         $defSort = [];
-
+		$this->csvData =[];
         foreach ($rows as $row) {
 			
             //if($row->datatype == 'date'){

@@ -333,6 +333,7 @@
 			<option
 				value="0">JNO</option>
 		</field>
+		<field name="asset_id" type="hidden" filter="unset" /> 
 		<field id="rules"
 			name="rules"
 			type="rules"
@@ -342,7 +343,7 @@
 			validate="rules"
 			class="inputbox"
 			component="com_eventtableedit"
-			section="etetable"
+			section="appointmenttable"
 		/>
 	</fieldset>
 </form>

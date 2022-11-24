@@ -220,10 +220,7 @@
 		
 		
 		
-		<field name="asset_id"
-			type="hidden"
-			filter="unset"
-		/>
+		
 		
 		<field name="lft"
 			type="hidden"
@@ -463,6 +460,10 @@
 			<option
 				value="0">JNO</option>
 		</field>
+		<field name="asset_id"
+			type="hidden"
+			filter="unset"
+		/>
 		<field id="rules"
 			name="rules"
 			type="rules"

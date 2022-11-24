@@ -16,20 +16,4 @@
 			component="com_eventtableedit"
 			section="component" />
 	</fieldset>
-	<fieldset
-		name="permissions"
-		label="JCONFIG_PERMISSIONS_LABEL"
-		description="JCONFIG_PERMISSIONS_DESC"
-		>
-		
-		<field
-			name="rules"
-			type="rules"
-			label="JCONFIG_PERMISSIONS_LABEL"
-			class="inputbox"
-			validate="rules"
-			filter="rules"
-			component="com_eventtableedit"
-			section="component" />
-	</fieldset>
 </config>
