@@ -50,8 +50,9 @@ class CsvimportnewtableModel extends CsvimportModel
         $this->detailsModel = $detailsModel;
         $this->checkfun = $checkfun;
         $this->tableName = $name;
+		$this->heads =[];
         $this->heads['datatype'] = $datatype;
-
+		
         if (!$this->createDetailsTable()) {
             return false;
         }
@@ -72,7 +73,9 @@ class CsvimportnewtableModel extends CsvimportModel
         $data['id'] = 0;
         $data['name'] = $this->tableName;
         $data['normalorappointment'] = $this->checkfun;
-
+		if($this->checkfun){
+			$data['hours'] = 24;
+		}
         $data['published'] = 1;
         if (!$this->detailsModel->save($data)) {
             Factory::getApplication()->enqueueMessage(Text::_('COM_EVENTTABLEEDIT_SAME_NAME'), 'error');

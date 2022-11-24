@@ -336,6 +336,9 @@ END:VCALENDAR';
         $body = $tableeditpostalldata->useremailtext;
 
         $body = str_replace('{datetimelist}', $datetimelist_body, $body);
+		$body = str_replace('{first_name}', $post['first_name'], $body);
+		$body = str_replace('{last_name}', $post['last_name'], $body);
+		$body = str_replace('{comment}', $post['comment'], $body);
 		if(isset($corresponding_table_name))
 			$body = str_replace('{option}', $corresponding_table_name, $body);
 
@@ -366,6 +369,8 @@ END:VCALENDAR';
         $description = $post['comment'];
 
         $description_adminbody = $tableeditpostalldata->adminemailtext;
+		$description_adminbody = str_replace('{first_name}', $post['first_name'], $description_adminbody);
+        $description_adminbody = str_replace('{last_name}', $post['last_name'], $description_adminbody);
         $description_adminbody = str_replace('{comment}', $post['comment'], $description_adminbody);
         $description_adminbody = str_replace('{datetimelist}', $datetimelist_body, $description_adminbody);
         $description_adminbody = str_replace('{option}', $corresponding_table_name, $description_adminbody);

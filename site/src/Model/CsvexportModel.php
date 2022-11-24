@@ -159,10 +159,16 @@ class CsvExportModel extends ItemModel
         $this->csvData = $csvData;
 		
         $data = \Csv::generateCsv($this->csvData, $this->separator, $this->doubleqt);
+		
+		
+		
 		//$id = $app->input->get('tableList');
 		$file = 'csv_'.$this->id.'.csv';
 
 		$this->csvFile = str_replace('csvcsv', '<br />', $data);
+		
+		
+		
 		$pf = fopen(JPATH_ROOT.'/components/com_eventtableedit/template/tablexml/'.$file, 'w');
 		if (!$pf) {
 			echo "Cannot create $file!".NL;
@@ -192,7 +198,7 @@ class CsvExportModel extends ItemModel
 
         $this->heads = [];
         $defSort = [];
-
+		$this->csvData = [];
         foreach ($rows as $row) {
             //if($row->datatype == 'date'){
             $this->csvData[0][] = $row->name.'|~|'.$row->datatype;

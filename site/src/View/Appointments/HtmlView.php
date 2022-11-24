@@ -66,9 +66,26 @@ class HtmlView extends BaseHtmlView {
 		
 		
 		$this->_prepareDocument();
-		
+		if (!$this->checkAccess()) {
+            return false;
+        }
 		parent::display($template);
     }
+	
+	protected function checkAccess()
+    {
+        $user = Factory::getUser();
+
+        $userAccess = $user->getAuthorisedViewLevels();
+
+        if (in_array($this->item->access, $userAccess)) {
+            return true;
+        } else {
+            Factory::getApplication()->enqueueMessage(Text::_('JERROR_ALERTNOAUTHOR'), 'warning');
+            return false;
+        }
+    }
+	
 	
 	private function isDefaultSorted() {
 		if (!count($this->heads)) {
