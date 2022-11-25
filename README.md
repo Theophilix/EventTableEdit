@@ -85,6 +85,12 @@ Please post all feature requests in the issues tab.
 
 ## II Version history
 
+**For version 1.0.1:**
+
+Fixed some small issues (problems with variables in appointment table function)
+
+
+
 **For version 1.0.0:**
 
 Version numbers (compare old ETE here: https://github.com/Theophilix/event-table-edit-old) have been reset as massive changes had to be made for Joomla 8.x.
