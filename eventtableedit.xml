@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0.1" encoding="utf-8"?>
 <extension type="component" method="upgrade">
 <!-- 'version' attribute for extension tag is no longer used -->
 
@@ -8,10 +8,10 @@
     <!-- Dummy author, feel free to replace anywhere you see it-->
     <author>Rahul Kaushik</author>
     <authorUrl>http://www.eventtableedit.com</authorUrl>
-    <copyright>2007 - 2021 Theophilix and Rahul Kaushik</copyright>
+    <copyright>2007 - 2022 Theophilix and Rahul Kaushik</copyright>
     <license>GPL v3</license>
     <!--  The version string is recorded in the components table -->
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <!-- The description is optional and defaults to the name -->
     <description>COM_EVENTTABLEEDIT_DESCRIPTION</description>
 	<scriptfile>script.php</scriptfile>
