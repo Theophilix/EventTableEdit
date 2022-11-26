@@ -623,7 +623,7 @@ BuildPopupWindow.prototype.sendData = function(tableProperties) {
 		self.inputValue = $('select[name=etetableDropdown]').val();
 	}
 	
-	var url = 'index.php?option=com_eventtableedit' +
+	var url = '<?php echo JURI::base(); ?>index.php?option=com_eventtableedit' +
 			  '&task=etetable.ajaxSaveCell';
 	var post = "content=" + encodeURIComponent(self.inputValue) +
 				"&cell=" + self.cell +
@@ -663,7 +663,7 @@ BuildPopupWindow.prototype.sendData = function(tableProperties) {
 BuildPopupWindow.prototype.executeDeleteRow = function(tableProperties) {
 	showLoad();
 	
-	var url = 'index.php?option=com_eventtableedit' +
+	var url = '<?php echo JURI::base(); ?>index.php?option=com_eventtableedit' +
 			  '&task=etetable.ajaxDeleteRow' +
 			  '&id=' + tableProperties.id +
 			  '&rowId=' + self.rowId;

@@ -15,7 +15,7 @@ class JHTMLIcon
 {
     public static function print_popup($article, $params, $attribs = [])
     {
-        $url = 'index.php?option=com_eventtableedit&id='.$article->slug;
+        $url = JURI::base().'index.php?option=com_eventtableedit&id='.$article->slug;
         $url .= '&tmpl=component&print=1&view=etetable&layout=print';
         $url .= '&limit=0&limitstart=0&filterstring='.$params->get('filterstring');
 
@@ -41,7 +41,7 @@ class JHTMLIcon
 
     public static function adminTable($article, $text)
     {
-        $url = 'index.php?option=com_eventtableedit&view=changetable&id='.$article->slug;
+        $url = JURI::base().'index.php?option=com_eventtableedit&view=changetable&id='.$article->slug;
 
         // checks template image directory for image, if non found default are loaded
         $button = JHTML::_('image', 'system/edit.png', $text, null, true);

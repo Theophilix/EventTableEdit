@@ -454,7 +454,7 @@ function openCell_<?php echo $this->unique; ?>(rowId, cell, editedCell) {
 	if (!others.doOpen()) return;
 	showLoad();
 	
-	var url = 'index.php?option=com_eventtableedit' +
+	var url = '<?php echo JURI::base(); ?>index.php?option=com_eventtableedit' +
 			  '&task=etetable.ajaxGetCell' +
 			  '&id=' + var_tableProperties_<?php echo $this->unique; ?>.id +
 			  '&cell=' + cell +
@@ -508,7 +508,7 @@ function newRow_<?php echo $this->unique; ?>() {
 	if (!others.doOpen()) return false;
 	showLoad();
 	
-	var myUrl = 'index.php?option=com_eventtableedit' +
+	var myUrl = '<?php echo JURI::base(); ?>index.php?option=com_eventtableedit' +
 				'&task=etetable.ajaxNewRow' +
 				'&id=' + var_tableProperties_<?php echo $this->unique; ?>.id;	
 	
