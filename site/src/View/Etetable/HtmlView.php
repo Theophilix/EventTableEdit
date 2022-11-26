@@ -36,7 +36,7 @@ class HtmlView extends BaseHtmlView {
         $this->item = $this->get('Item');
 		
 		
-        $this->unique = 'ETE_'.$this->item->alias.'_'.rand(0, 999);
+        $this->unique = 'ETE_'.str_replace('-','_',$this->item->alias).'_'.rand(0, 999);
 		
 		
 		$this->heads = $this->get('Heads');
