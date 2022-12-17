@@ -72,5 +72,7 @@
 		</languages>
 		
     </administration>
-
+<updateservers>
+	<server type="extension" name="Event Table Edit Updates">https://update.eventtableedit.com/ete_update.xml</server>
+</updateservers>
 </extension>
