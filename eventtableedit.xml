@@ -11,7 +11,7 @@
     <copyright>2007 - 2022 Theophilix and Rahul Kaushik</copyright>
     <license>GPL v3</license>
     <!--  The version string is recorded in the components table -->
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <!-- The description is optional and defaults to the name -->
     <description>COM_EVENTTABLEEDIT_DESCRIPTION</description>
 	<scriptfile>script.php</scriptfile>
@@ -72,5 +72,7 @@
 		</languages>
 		
     </administration>
-
+<updateservers>
+	<server type="extension" name="Event Table Edit Updates">https://update.eventtableedit.com/ete_update.xml</server>
+</updateservers>
 </extension>

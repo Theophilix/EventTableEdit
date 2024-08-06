@@ -811,4 +811,16 @@ class EtetableModel extends ItemModel
 
         return  $inserttempid.'|'.$newOrdering;
     }
+	
+	public function checkAclOwnRow($rowId, $uid)
+    {
+		$main = Factory::getApplication()->input;
+		$db = Factory::getDbo();
+        $tableId = $main->getInt('id', '-1');
+        $query = 'SELECT IF(created_by = '.$uid.', 1, 0)'.
+                 ' FROM #__eventtableedit_rows_'.$tableId.
+                 ' WHERE id = '.$rowId;
+        $db->setQuery($query);
+        return (int) $db->loadResult();
+    }
 }

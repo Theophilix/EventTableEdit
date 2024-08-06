@@ -34,7 +34,8 @@ class EtetableController extends FormController {
         $rowId = $main->getInt('rowId', '-1');
         $tableId = $main->getInt('id', '-1');
         if (!$this->aclCheck('edit') && !$this->checkAclOwnRow($rowId)) {
-            return false;
+			echo "";
+			die;
         }
 
         $postget = $main->getArray();
@@ -59,7 +60,8 @@ class EtetableController extends FormController {
         $rowId = $main->getInt('rowId', '-1');
         $tableId = $main->getInt('id', '-1');
         if (!$this->aclCheck('edit') && !$this->checkAclOwnRow($rowId)) {
-            return false;
+            echo "";
+			die;
         }
         $postget = $main->getArray();
 
@@ -231,7 +233,7 @@ class EtetableController extends FormController {
         $user = Factory::getUser();
         $uid = $user->get('id');
 
-        $model = &$this->getModel('etetable');
+        $model = $this->getModel('etetable');
         return $model->checkAclOwnRow($rowId, $uid);
     }
 

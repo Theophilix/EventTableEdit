@@ -11,7 +11,7 @@ As it is based on a CSS-template, the layout of the table can be changed easily.
 
 Try all the functions (including backend) on the demo site: https://demo.eventtableedit.com. Log in as user or admin with the given login credentials.
 
-Download latest version 1.0.0 (release date: 01.03.2022) here: https://github.com/Theophilix/EventTableEdit/archive/refs/heads/main.zip.
+Download latest version 1.0.2 (release date: 26.11.2022) here: https://github.com/Theophilix/EventTableEdit/archive/refs/heads/main.zip.
 
 Download older releases here: https://github.com/Theophilix/EventTableEdit/releases.
 
@@ -85,10 +85,14 @@ Please post all feature requests in the issues tab.
 
 ## II Version history
 
+**For version 1.0.2:**
+
+Fixed issue 1,3,5.
+
+
 **For version 1.0.1:**
 
 Fixed some small issues (problems with variables in appointment table function)
-
 
 
 **For version 1.0.0:**
